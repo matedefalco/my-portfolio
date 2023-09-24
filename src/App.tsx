@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button"
+import NavBar from "./components/NavBar"
 
 const App = () => {
 	return (
-		<div>
-			<Button>Click me</Button>
-		</div>
+		<main className="flex flex-col items-center">
+			<NavBar />
+		</main>
 	)
 }
 
