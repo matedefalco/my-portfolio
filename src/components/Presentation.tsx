@@ -8,7 +8,7 @@ const Presentation = () => {
 			<h1 className="text-4xl font-serif font-black">DEVELOPER</h1>
 			<div className="flex gap-2">
 				<Button>Previous Projects</Button>
-				<Button>Skills</Button>
+				<Button variant="outline">Skills</Button>
 			</div>
 		</div>
 	)

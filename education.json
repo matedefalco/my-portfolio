@@ -1,0 +1,25 @@
+{
+	"educationBG": [
+		{
+			"institutionName": "Digital House",
+			"title": "Web Full-Stack Developer",
+			"date": "July 2019 - December 2019",
+			"image": "digitalHouse.png",
+			"description": "Activities and Societies:\n- FullStack Development\n- Technologies: HTML, CSS, JavaScript, PHP, Laravel, Eloquent, MySQL, OOP, Git\n- Agile Methodologies: Scrum\n- MVC Architecture Pattern\n- MySQL Workbench\n- Text Editors: Atom / VSCode\n\nDuring my academic journey, I actively participated in FullStack development activities and societies. Here's a breakdown of my involvement:\n\n1. Technology Stack: I gained proficiency in various technologies, including HTML, CSS, JavaScript, PHP, Laravel, Eloquent, MySQL, OOP, and Git. These skills formed the foundation of my FullStack development expertise.\n\n2. Agile Methodologies: I was introduced to Agile methodologies, particularly Scrum, which emphasized collaborative and iterative development processes.\n\n3. MVC Architecture: I applied the Model-View-Controller (MVC) architecture pattern to develop efficient and organized web applications.\n\n4. Database Management: I utilized MySQL Workbench for designing and managing relational databases, ensuring data integrity and efficiency.\n\n5. Text Editors: I worked with popular text editors like Atom and Visual Studio Code, enhancing my coding efficiency.\n\nAdditionally, I had the opportunity to work on a significant project:\n\n- Project: Social Network Web Application\n  - Front-End: I developed the user interface using HTML, CSS, and JavaScript to create a responsive and user-friendly design.\n  - Back-End: I implemented the REST API and server-side logic using PHP, with Laravel as a supporting framework, following best practices in MVC architecture.\n  - Database Design: I designed the relational database using UML, facilitating efficient data interactions with MySQL.\n  - Version Control: The project was managed using Git for version control in a collaborative and organized manner within a private repository.\n\nMy academic journey equipped me with valuable skills and experiences in FullStack development, agile methodologies, and effective project management."
+		},
+		{
+			"institutionName": "Coder House",
+			"title": "Project Manager & UX/UI Design",
+			"date": "December 2021 - April 2022",
+			"image": "coderHouse.png",
+			"description": "Product Manager, Business, Management, Marketing, and Related Disciplines, Grade: 9\n\nDuring this course, I gained in-depth knowledge of various aspects of product management, including:\n\n- Mission, Vision, and Purpose\n- Problem Identification\n- Exploring Different Points Of View (POV)\n- Defining a Unique Value Proposition\n- Creating a Project Brief\n- Designing a Client Persona\n- Conducting Market Research\n- Defining a Business Model\n- Performing a SWOT Analysis\n- Calculating Market Volume\n- Crafting a Differentiation Strategy\n- Developing a Positioning Map Relative to Competitors\n- Creating a Minimum Viable Product (MVP)\n- Defining a Development Roadmap\n\nThroughout the course, I had the opportunity to apply these skills in project development and strategic decision-making."
+		},
+		{
+			"institutionName": "Crypto Zombies",
+			"title": "Smart Contract Development",
+			"date": "November 2020 - December 2020",
+			"image": "cryptoZombies.png",
+			"description": "Covering various aspects of Solidity development and diverse tools for crafting decentralized applications.\n\nThese include:\n\nFundamentals of Solidity development\nChainlink and decentralized oracles\nTruffle and oracle creation\nzkSync"
+		}
+	]
+}
