@@ -25,7 +25,7 @@ const AboutMe = () => {
 					I'm committed to staying updated with the latest advancements in the
 					field.
 				</p>
-				<div className="flex gap-2">
+				<div className="flex gap-2 justify-center lg:justify-start">
 					<Button variant="outline" onClick={handleResumeClick}>
 						Resume
 					</Button>

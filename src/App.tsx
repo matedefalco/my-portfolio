@@ -1,5 +1,6 @@
 import AboutMe from "./components/AboutMe"
 import NavBar from "./components/NavBar"
+import Portfolio from "./components/Portfolio"
 import Presentation from "./components/Presentation"
 import { motion } from "framer-motion"
 
@@ -23,6 +24,14 @@ const App = () => {
 					transition={{ duration: 1 }}
 				>
 					<AboutMe />
+				</motion.div>
+				<motion.div
+					className="flex flex-col w-[80%]"
+					initial={{ opacity: 0, x: -200 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ duration: 1 }}
+				>
+					<Portfolio />
 				</motion.div>
 			</div>
 		</main>
