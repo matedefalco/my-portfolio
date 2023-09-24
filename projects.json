@@ -1,0 +1,44 @@
+{
+	"projectsList": [
+		{
+			"name": "Password Generator",
+			"url": "https://password-generator-matedefalco.vercel.app/",
+			"image": "passwordGenerator.png"
+		},
+		{
+			"name": "Ranking Pinta Token",
+			"url": "https://ranking.pintatoken.com/",
+			"image": "rankingPNT.png"
+		},
+		{
+			"name": "Dollar Calculator",
+			"url": "https://dollar-calculator-matedefalco.vercel.app/",
+			"image": "dollarCalculator.png"
+		},
+		{
+			"name": "Blockchain Balance Tool",
+			"url": "https://blockchain-wallet-balance-tool.vercel.app/",
+			"image": "blockchainBalanceTool.png"
+		},
+		{
+			"name": "Memotest",
+			"url": "https://memotest-matedefalco.vercel.app/",
+			"image": "memotest.png"
+		},
+		{
+			"name": "Words per Minute",
+			"url": "https://words-per-minute-matedefalco.vercel.app/",
+			"image": "wordsPerMinute.png"
+		},
+		{
+			"name": "Color Game",
+			"url": "https://color-game-matedefalco.vercel.app/",
+			"image": "colorGame.png"
+		},
+		{
+			"name": "Tik Tak Toe",
+			"url": "https://tik-tak-toe-matedefalco.vercel.app/",
+			"image": "tikTakToe.png"
+		}
+	]
+}
