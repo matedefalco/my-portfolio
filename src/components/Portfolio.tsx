@@ -1,27 +1,19 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "./ui/button"
 import Projects from "@/views/Projects"
 import Skills from "@/views/Skills"
 import Education from "@/views/Education"
+import { PortfolioProps } from "@/types/INavigation"
 
-const Portfolio = () => {
-	const [activePage, setActivePage] = useState<string>("projects")
+const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
+	const [activeTab, setActiveTab] = useState("projects")
 
-	const handlePageChange = (page: string) => {
-		setActivePage(page)
-	}
+	useEffect(() => {
+		setActiveTab(activePage)
+	}, [activePage])
 
-	const renderPage = () => {
-		switch (activePage) {
-			case "projects":
-				return <Projects />
-			case "skills":
-				return <Skills />
-			case "education":
-				return <Education />
-			default:
-				return null
-		}
+	const handleTabChange = (tab: string) => {
+		setActiveTab(tab)
 	}
 
 	return (
@@ -30,9 +22,9 @@ const Portfolio = () => {
 			<div className="flex justify-between mt-4">
 				<Button
 					variant="link"
-					onClick={() => handlePageChange("projects")}
+					onClick={() => handleTabChange("projects")}
 					className={
-						activePage === "projects"
+						activeTab === "projects"
 							? "text-gray-700 font-bold"
 							: "text-gray-500"
 					}
@@ -41,20 +33,18 @@ const Portfolio = () => {
 				</Button>
 				<Button
 					variant="link"
-					onClick={() => handlePageChange("skills")}
+					onClick={() => handleTabChange("skills")}
 					className={
-						activePage === "skills"
-							? "text-gray-700 font-bold"
-							: "text-gray-500"
+						activeTab === "skills" ? "text-gray-700 font-bold" : "text-gray-500"
 					}
 				>
 					Skills
 				</Button>
 				<Button
 					variant="link"
-					onClick={() => handlePageChange("education")}
+					onClick={() => handleTabChange("education")}
 					className={
-						activePage === "education"
+						activeTab === "education"
 							? "text-gray-700 font-bold"
 							: "text-gray-500"
 					}
@@ -62,7 +52,11 @@ const Portfolio = () => {
 					Education
 				</Button>
 			</div>
-			<div className="flex flex-col">{renderPage()}</div>
+			<div className="flex flex-col">
+				{activeTab === "projects" ? <Projects /> : null}
+				{activeTab === "skills" ? <Skills /> : null}
+				{activeTab === "education" ? <Education /> : null}
+			</div>
 		</div>
 	)
 }

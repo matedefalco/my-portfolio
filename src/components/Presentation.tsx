@@ -1,14 +1,17 @@
 import { Button } from "./ui/button"
+import { PresentationProps } from "@/types/INavigation"
 
-const Presentation = () => {
+const Presentation: React.FC<PresentationProps> = ({ onClick }) => {
 	return (
-		<div className="flex flex-col w-full min-h-80">
-			<p className="text-2xl text-slate-400">I`m a</p>
+		<div id="presentation" className="flex flex-col w-full min-h-80">
+			<p className="text-2xl text-slate-400">I'm a</p>
 			<h1 className="text-4xl font-serif font-black">FRONT-END</h1>
 			<h1 className="text-4xl font-serif font-black">DEVELOPER</h1>
 			<div className="flex gap-2">
-				<Button>Previous Projects</Button>
-				<Button variant="outline">Skills</Button>
+				<Button onClick={() => onClick(1)}>Previous Projects</Button>
+				<Button onClick={() => onClick(2)} variant="outline">
+					Skills
+				</Button>
 			</div>
 		</div>
 	)

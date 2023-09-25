@@ -3,7 +3,7 @@ import educationData from "../../education.json"
 
 const Education = () => {
 	return (
-		<div>
+		<div id="education">
 			<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 				{educationData.educationBG.map((education, index) => (
 					<li key={index} className="">
