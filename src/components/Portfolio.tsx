@@ -25,8 +25,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 					onClick={() => handleTabChange("projects")}
 					className={
 						activeTab === "projects"
-							? "text-gray-700 font-bold"
-							: "text-gray-500"
+							? "text-gray-800 dark:text-white font-bold"
+							: "text-gray-500 dark:text-gray-500"
 					}
 				>
 					Projects
@@ -35,7 +35,9 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 					variant="link"
 					onClick={() => handleTabChange("skills")}
 					className={
-						activeTab === "skills" ? "text-gray-700 font-bold" : "text-gray-500"
+						activeTab === "skills"
+							? "text-gray-800 dark:text-white font-bold"
+							: "text-gray-500 dark:text-gray-500"
 					}
 				>
 					Skills
@@ -45,8 +47,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 					onClick={() => handleTabChange("education")}
 					className={
 						activeTab === "education"
-							? "text-gray-700 font-bold"
-							: "text-gray-500"
+							? "text-gray-800 dark:text-white font-bold"
+							: "text-gray-500 dark:text-gray-500"
 					}
 				>
 					Education
