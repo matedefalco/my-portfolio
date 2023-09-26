@@ -1,0 +1,99 @@
+{
+	"skillsDB": [
+		{
+			"technology": "HTML",
+			"skills": "Semantic HTML, HTML5",
+			"logo": "htmlLogo.webp"
+		},
+		{
+			"technology": "CSS",
+			"skills": "CSS3, CSS Frameworks (e.g., Bootstrap, TailwindCSS)",
+			"logo": "cssLogo.png"
+		},
+		{
+			"technology": "JavaScript",
+			"skills": "ES6, DOM Manipulation, AJAX, Promises",
+			"logo": "javascriptLogo.webp"
+		},
+		{
+			"technology": "React.js",
+			"skills": "React Components, Hooks, Redux",
+			"logo": "reactLogo.png"
+		},
+		{
+			"technology": "Next.js",
+			"skills": "Server-side Rendering (SSR), Static Site Generation (SSG)",
+			"logo": "nextjsLogo.webp"
+		},
+		{
+			"technology": "TypeScript",
+			"skills": "Static Typing, Type Definitions",
+			"logo": "typescriptLogo.png"
+		},
+		{
+			"technology": "TailwindCSS",
+			"skills": "Utility-first CSS Framework",
+			"logo": "tailwindcssLogo.png"
+		},
+		{
+			"technology": "Vercel",
+			"skills": "Website Online deployment",
+			"logo": "vercelLogo.png"
+		},
+		{
+			"technology": "Solidity",
+			"skills": "Ethereum Smart Contracts",
+			"logo": "solidityLogo.png"
+		},
+		{
+			"technology": "Laravel",
+			"skills": "PHP Framework for Web Development",
+			"logo": "laravelLogo.jpg"
+		},
+		{
+			"technology": "PHP",
+			"skills": "Server-side Scripting Language",
+			"logo": "phpLogo.png"
+		},
+		{
+			"technology": "GraphQL",
+			"skills": "API Query Language",
+			"logo": "graphqlLogo.png"
+		},
+		{
+			"technology": "The Graph",
+			"skills": "GraphQL Service for Web3",
+			"logo": "thegraphLogo.png"
+		},
+		{
+			"technology": "Google Analytics",
+			"skills": "Web Analytics Platform",
+			"logo": "googleanalyticsLogo.png"
+		},
+		{
+			"technology": "Google Tag Manager",
+			"skills": "Tag Management System",
+			"logo": "googletagmanagerLogo.png"
+		},
+		{
+			"technology": "Adobe Analytics",
+			"skills": "Digital Analytics Platform",
+			"logo": "adobeanalyticsLogo.webp"
+		},
+		{
+			"technology": "Jira",
+			"skills": "Project and Issue Tracking",
+			"logo": "jiraLogo.webp"
+		},
+		{
+			"technology": "Notion",
+			"skills": "Note-taking and Collaboration",
+			"logo": "notionLogo.avif"
+		},
+		{
+			"technology": "Figma",
+			"skills": "UI/UX Design and Prototyping",
+			"logo": "figmaLogo.png"
+		}
+	]
+}
