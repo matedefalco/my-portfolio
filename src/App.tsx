@@ -21,11 +21,11 @@ const App = () => {
 	return (
 		<main className="flex flex-col min-h-screen items-center">
 			<NavBar />
-			<div className="py-16 flex flex-col items-center w-full gap-8 bg-[--background-color]">
+			<div className="pt-16 flex flex-col items-center w-full gap-8 bg-[--background-color]">
 				<motion.div
 					className="flex flex-col w-[80%]"
 					initial={{ opacity: 0, x: -200 }}
-					animate={{ opacity: 1, x: 0 }}
+					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 1.5 }}
 				>
 					<Presentation
@@ -36,7 +36,7 @@ const App = () => {
 				<motion.div
 					className="flex flex-col w-[80%]"
 					initial={{ opacity: 0, x: 200 }}
-					animate={{ opacity: 1, x: 0 }}
+					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 1.5 }}
 				>
 					<AboutMe />
@@ -44,19 +44,14 @@ const App = () => {
 				<motion.div
 					className="flex flex-col w-[80%]"
 					initial={{ opacity: 0, x: -200 }}
-					animate={{ opacity: 1, x: 0 }}
+					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 1.5 }}
 				>
 					<Portfolio activePage={pages[activePageIndex]} />
 				</motion.div>
-				<motion.div
-					className="flex flex-col w-full"
-					initial={{ opacity: 0, x: 200 }}
-					animate={{ opacity: 1, x: 0 }}
-					transition={{ duration: 1.5 }}
-				>
+				<div className="flex flex-col w-full">
 					<Footer />
-				</motion.div>
+				</div>
 			</div>
 		</main>
 	)
