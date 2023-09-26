@@ -20,7 +20,7 @@ const App = () => {
 	return (
 		<main className="flex flex-col min-h-screen items-center">
 			<NavBar />
-			<div className="py-16 flex flex-col items-center w-full gap-8">
+			<div className="py-16 flex flex-col items-center w-full gap-8 bg-[--background-color]">
 				<motion.div
 					className="flex flex-col w-[80%]"
 					initial={{ opacity: 0, x: -200 }}

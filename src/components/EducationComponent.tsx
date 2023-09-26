@@ -18,7 +18,7 @@ const EducationComponent: React.FC<EducationProps> = ({
 	}
 
 	return (
-		<Card>
+		<Card className="bg-white dark:bg-[--bg-secondary] min-h-full flex flex-col justify-start">
 			<CardContent>
 				<div className="flex flex-col items-center justify-center pt-4">
 					<img
@@ -30,7 +30,7 @@ const EducationComponent: React.FC<EducationProps> = ({
 			</CardContent>
 			<CardFooter>
 				<div className="flex flex-col items-center justify-center lg:items-start lg:justify-start  gap-2 w-full">
-					<div className="flex flex-col">
+					<div className="flex flex-col items-center lg:items-start">
 						<h1 className="text-sm font-bold">{title}</h1>
 						<p className="text-xs text-slate-400">{date}</p>
 						<div className="flex items-center gap-1">
@@ -47,10 +47,10 @@ const EducationComponent: React.FC<EducationProps> = ({
 				<Modal onClose={toggleModal}>
 					<div className="flex flex-col gap-2">
 						<div className="flex flex-col">
-							<h1 className="text-xl font-bold">{title}</h1>
+							<h1 className="text-xl font-bold dark:text-black">{title}</h1>
 							<p className="text-slate-600">{institutionName}</p>
 						</div>
-						<p className="text-sm">{description}</p>
+						<p className="text-sm dark:text-black">{description}</p>
 					</div>
 				</Modal>
 			)}

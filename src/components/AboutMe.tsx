@@ -14,7 +14,7 @@ const AboutMe = () => {
 				className="h-80 w-auto border-4 rounded-full"
 			/>
 			<div className="flex flex-col gap-4 justify-center">
-				<h2 className="font-extrabold">ABOUT ME</h2>
+				<h2 className="font-extrabold text-3xl">ABOUT ME</h2>
 				<p className="text-slate-500">
 					Hello, I'm Mateo, a{" "}
 					<b className="dark:text-white">full-stack web developer</b> with a
