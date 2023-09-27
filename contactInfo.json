@@ -1,0 +1,15 @@
+{
+	"contact": [
+		{ "name": "Phone", "value": "(+54) 011 3635-8577" },
+		{
+			"name": "LinkedIn",
+			"value": "https://www.linkedin.com/in/mateo-de-falco/ "
+		},
+		{
+			"name": "GitHub",
+			"value": "https://github.com/matedefalco"
+		},
+		{ "name": "Mail", "value": "mateodefalco1@gmail.com" },
+		{ "name": "Location", "value": "Buenos Aires, Argentina" }
+	]
+}

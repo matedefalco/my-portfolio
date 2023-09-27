@@ -54,7 +54,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 					Education
 				</Button>
 			</div>
-			<div className="flex flex-col">
+			<div className="flex flex-col z-0">
 				{activeTab === "projects" ? <Projects /> : null}
 				{activeTab === "skills" ? <Skills /> : null}
 				{activeTab === "education" ? <Education /> : null}
