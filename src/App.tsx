@@ -7,12 +7,12 @@ import Footer from "./components/Footer"
 import { motion } from "framer-motion"
 
 const App = () => {
-	const pages = ["presentation", "projects", "skills"]
+	const pages = ["projects", "skills", "education"]
 	const [activePageIndex, setActivePageIndex] = useState<number>(0)
 
 	const handlePageChange = (pageIndex: number) => {
 		setActivePageIndex(pageIndex)
-		const element = document.getElementById(pages[pageIndex])
+		const element = document.getElementById("portfolio")
 		if (element) {
 			element.scrollIntoView({ behavior: "smooth" })
 		}

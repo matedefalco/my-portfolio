@@ -17,7 +17,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 	}
 
 	return (
-		<div className="flex flex-col items-center gap-4">
+		<div id="portfolio" className="flex flex-col items-center gap-4">
 			<h1 className="font-extrabold text-3xl">PORTFOLIO</h1>
 			<div className="flex justify-between mt-4">
 				<Button
