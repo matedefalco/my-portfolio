@@ -2,7 +2,7 @@ import skills from "../../skills.json"
 import SkillComponent from "@/components/SkillComponent"
 const Skills = () => {
 	return (
-		<div id="education">
+		<div id="skills">
 			<ul className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 				{skills.skillsDB.map((skill, index) => (
 					<li key={index} className="">
