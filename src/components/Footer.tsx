@@ -13,9 +13,9 @@ const Footer = () => {
 		<div className="flex flex-col gap-8 items-center bg-slate-200 dark:bg-slate-900 p-8">
 			<h1 className="font-extrabold text-2xl">CONTACT</h1>
 			<div className="flex flex-col lg:flex-row px-16 items-center justify-between gap-8 lg:gap-0">
-				<div className="flex flex-col w-[45%] gap-4 items-center lg:items-start">
-					<h2 className="text-xl font-bold">Drop a message</h2>
-					<p className="text-center lg:text-start mx-auto lg:mx-0">
+				<div className="flex flex-col w-full lg:w-[45%] gap-4 items-center lg:items-start text-center lg:text-start mx-auto lg:mx-0">
+					<h2 className="text-xl font-bold ">Drop a message</h2>
+					<p>
 						I'd love to hear from you! Feel free to reach out with any
 						questions, comments, or just to say hello. I'm here to help!
 					</p>
@@ -52,7 +52,7 @@ const Footer = () => {
 						))}
 					</ul>
 				</div>
-				<div className="flex flex-col gap-4 w-[45%]">
+				<div className="flex flex-col gap-4 w-full lg:w-[45%]">
 					<ContactForm />
 				</div>
 			</div>
