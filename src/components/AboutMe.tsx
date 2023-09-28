@@ -9,9 +9,9 @@ const AboutMe = () => {
 	return (
 		<div className="flex flex-col lg:flex-row gap-8">
 			<img
-				src="public/Mateo.png"
+				src="mateoDeFalco.png"
 				alt="Profile Image"
-				className="h-80 w-auto border-4 rounded-full"
+				className="h-80 w-80 border-4 rounded-full object-cover"
 			/>
 			<div className="flex flex-col gap-4 justify-center">
 				<h2 className="font-extrabold text-3xl">ABOUT ME</h2>
