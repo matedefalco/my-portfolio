@@ -20,6 +20,8 @@ const EducationComponent: React.FC<EducationProps> = ({
 	date,
 	description,
 }) => {
+	const descriptionLines = description.split("\n")
+
 	return (
 		<Card className="bg-white dark:bg-[--bg-secondary] min-h-full flex flex-col justify-start">
 			<CardContent>
@@ -46,10 +48,16 @@ const EducationComponent: React.FC<EducationProps> = ({
 							<AlertDialogTrigger>
 								<Button>See more</Button>
 							</AlertDialogTrigger>
-							<AlertDialogContent>
+							<AlertDialogContent className="h-[90%] overflow-auto">
 								<AlertDialogHeader>
 									<AlertDialogTitle>{title}</AlertDialogTitle>
-									<AlertDialogDescription>{description}</AlertDialogDescription>
+									<AlertDialogDescription>
+										{descriptionLines.map((line, index) => (
+											<p key={index} className="text-sm">
+												{line}
+											</p>
+										))}
+									</AlertDialogDescription>
 								</AlertDialogHeader>
 								<AlertDialogFooter>
 									<AlertDialogCancel>Close</AlertDialogCancel>
