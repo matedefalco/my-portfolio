@@ -7,14 +7,14 @@ const ProjectComponent: React.FC<ProjectProps> = ({ name, url, image }) => {
 	const isMobile = useMediaQuery({ maxWidth: 767 })
 
 	return (
-		<a
-			href={url}
-			target="_blank"
-			rel="noopener noreferrer"
-			className="text-xs text-slate-400 hover:underline"
-		>
-			<Card className="bg-white dark:bg-[--bg-secondary] min-h-full flex flex-col justify-start">
-				<CardContent>
+		<Card className="bg-white dark:bg-[--bg-secondary] min-h-full flex flex-col justify-start">
+			<a
+				href={url}
+				target="_blank"
+				rel="noopener noreferrer"
+				className="text-xs text-slate-400 hover:underline flex flex-col items-center"
+			>
+				<CardContent className="w-full">
 					<div className="flex flex-col items-center justify-center pt-4">
 						<img src={image} alt={image} className="object-cover w-full h-40" />
 					</div>
@@ -27,8 +27,8 @@ const ProjectComponent: React.FC<ProjectProps> = ({ name, url, image }) => {
 						</div>
 					</div>
 				</CardFooter>
-			</Card>
-		</a>
+			</a>
+		</Card>
 	)
 }
 
