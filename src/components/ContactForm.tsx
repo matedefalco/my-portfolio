@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import * as z from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -13,8 +14,14 @@ import {
 } from "../components/ui/form"
 import { Input } from "../components/ui/input"
 import { Button } from "../components/ui/button"
+import emailjs from "@emailjs/browser"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 const ContactForm = () => {
+	const [emailSent, setEmailSent] = useState<string | undefined>(undefined)
+	const [emailSentMessage, setEmailSentMessage] = useState("")
+	useEffect(() => emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY), [])
+
 	const formSchema = z.object({
 		name: z.string().min(2).max(50),
 		mail: z.string().email(),
@@ -30,15 +37,49 @@ const ContactForm = () => {
 		},
 	})
 
-	function onSubmit(values: z.infer<typeof formSchema>) {
-		console.log(values)
+	const onSubmit = async (values: z.infer<typeof formSchema>) => {
+		try {
+			const templateParams = {
+				to_name: "Mateo",
+				from_name: values.name,
+				from_mail: values.mail,
+				message: values.message,
+			}
+
+			const response = await emailjs.send(
+				import.meta.env.VITE_EMAILJS_GMAIL_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_GMAIL_TEMPLATE_ID,
+				templateParams,
+				import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+			)
+			console.log("SUCCESS!", response)
+			setEmailSentMessage("Your email was sent successfully.")
+			setEmailSent("sent")
+		} catch (error) {
+			console.error("FAILED...", error)
+			setEmailSent("error")
+			setEmailSentMessage(
+				"Your email could not be sent successfully.	Please try again."
+			)
+		}
 	}
+
+	useEffect(() => {
+		if (emailSent !== undefined) {
+			const timeout = setTimeout(() => {
+				setEmailSent(undefined)
+				setEmailSentMessage("")
+			}, 3000)
+			return () => clearTimeout(timeout)
+		}
+	}, [emailSent])
 
 	return (
 		<Form {...form}>
 			<form
+				id="contact-form"
 				onSubmit={form.handleSubmit(onSubmit)}
-				className="space-y-4 text-white rounded-xl p-4 bg-gradient-to-b from-blue-700 to-indigo-700"
+				className="space-y-4 rounded-xl p-4 bg-gradient-to-b from-blue-700 to-indigo-700"
 			>
 				<FormField
 					control={form.control}
@@ -85,6 +126,18 @@ const ContactForm = () => {
 					</Button>
 				</div>
 			</form>
+			{emailSent === "sent" && (
+				<Alert>
+					<AlertTitle>Great!</AlertTitle>
+					<AlertDescription>{emailSentMessage}</AlertDescription>
+				</Alert>
+			)}
+			{emailSent === "error" && (
+				<Alert>
+					<AlertTitle>Error</AlertTitle>
+					<AlertDescription>{emailSentMessage}</AlertDescription>
+				</Alert>
+			)}
 		</Form>
 	)
 }
