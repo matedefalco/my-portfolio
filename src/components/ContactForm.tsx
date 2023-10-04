@@ -69,7 +69,7 @@ const ContactForm = () => {
 			const timeout = setTimeout(() => {
 				setEmailSent(undefined)
 				setEmailSentMessage("")
-			}, 3000)
+			}, 5000)
 			return () => clearTimeout(timeout)
 		}
 	}, [emailSent])
