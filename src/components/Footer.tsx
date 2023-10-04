@@ -1,11 +1,6 @@
 import contactDB from "../../contactInfo.json"
 import ContactForm from "./ContactForm"
-import {
-	AiFillPhone,
-	AiFillLinkedin,
-	AiFillMail,
-	AiFillGithub,
-} from "react-icons/ai"
+import { AiFillLinkedin, AiFillMail, AiFillGithub } from "react-icons/ai"
 import { IoLocationSharp } from "react-icons/io5"
 
 const Footer = () => {
