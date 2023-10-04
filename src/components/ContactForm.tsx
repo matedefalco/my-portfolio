@@ -86,7 +86,7 @@ const ContactForm = () => {
 					name="name"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Name</FormLabel>
+							<FormLabel className="text-white">Name</FormLabel>
 							<FormControl>
 								<Input placeholder="Name" {...field} />
 							</FormControl>
@@ -99,7 +99,7 @@ const ContactForm = () => {
 					name="mail"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Email</FormLabel>
+							<FormLabel className="text-white">Email</FormLabel>
 							<FormControl>
 								<Input placeholder="Email" {...field} />
 							</FormControl>
@@ -112,7 +112,7 @@ const ContactForm = () => {
 					name="message"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Message</FormLabel>
+							<FormLabel className="text-white">Message</FormLabel>
 							<FormControl>
 								<Input placeholder="Leave a messsage" {...field} />
 							</FormControl>
@@ -121,7 +121,7 @@ const ContactForm = () => {
 					)}
 				/>
 				<div className="flex flex-col items-center lg:items-start">
-					<Button type="submit" variant="outline">
+					<Button type="submit" variant="outline" className="text-white">
 						Submit
 					</Button>
 				</div>
