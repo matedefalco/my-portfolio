@@ -1,6 +1,11 @@
 {
 	"projectsList": [
 		{
+			"name": "Token Allies",
+			"url": "https://tokenallies.com/",
+			"image": "tokenAllies.png"
+		},
+		{
 			"name": "Password Generator",
 			"url": "https://password-generator-matedefalco.vercel.app/",
 			"image": "passwordGenerator.png"

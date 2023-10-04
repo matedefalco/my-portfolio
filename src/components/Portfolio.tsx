@@ -19,36 +19,36 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 	return (
 		<div id="portfolio" className="flex flex-col items-center gap-4">
 			<h1 className="font-extrabold text-3xl">PORTFOLIO</h1>
-			<div className="flex justify-between mt-4">
-				<Button
-					variant="link"
-					onClick={() => handleTabChange("projects")}
-					className={
-						activeTab === "projects"
-							? "text-gray-800 dark:text-white font-bold"
-							: "text-gray-500 dark:text-gray-500"
-					}
-				>
-					Projects
-				</Button>
+			<div className="flex justify-between items-center mt-4 border rounded-lg py-2 px-4">
 				<Button
 					variant="link"
 					onClick={() => handleTabChange("skills")}
 					className={
 						activeTab === "skills"
-							? "text-gray-800 dark:text-white font-bold"
-							: "text-gray-500 dark:text-gray-500"
+							? "text-lg text-gray-800 dark:text-white font-bold"
+							: "text-lg text-gray-500 dark:text-gray-500"
 					}
 				>
 					Skills
 				</Button>
 				<Button
 					variant="link"
+					onClick={() => handleTabChange("projects")}
+					className={
+						activeTab === "projects"
+							? "text-lg text-gray-800 dark:text-white font-bold"
+							: "text-lg text-gray-500 dark:text-gray-500"
+					}
+				>
+					Projects
+				</Button>
+				<Button
+					variant="link"
 					onClick={() => handleTabChange("education")}
 					className={
 						activeTab === "education"
-							? "text-gray-800 dark:text-white font-bold"
-							: "text-gray-500 dark:text-gray-500"
+							? "text-lg text-gray-800 dark:text-white font-bold"
+							: "text-lg text-gray-500 dark:text-gray-500"
 					}
 				>
 					Education
