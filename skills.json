@@ -2,97 +2,97 @@
 	"skillsDB": [
 		{
 			"technology": "HTML",
-			"skills": "Semantic HTML, HTML5",
+			"skills": "Crafting <b>well-structured</b> web content.",
 			"logo": "htmlLogo.webp"
 		},
 		{
 			"technology": "CSS",
-			"skills": "CSS3, CSS Frameworks (e.g., Bootstrap, TailwindCSS)",
+			"skills": "Designing <b>responsive</b> and <b>visually captivating</b> websites.",
 			"logo": "cssLogo.png"
 		},
 		{
 			"technology": "JavaScript",
-			"skills": "ES6, DOM Manipulation, AJAX, Promises",
+			"skills": "Proficient in <b>ES6</b> for seamless <b>DOM manipulation</b>, <b>AJAX requests</b>, and handling <b>Promises</b> to elevate user interactions.",
 			"logo": "javascriptLogo.webp"
 		},
 		{
 			"technology": "React.js",
-			"skills": "React Components, Hooks, Redux",
+			"skills": "Building <b>reusable components</b>, implementing <b>React Hooks</b>, and skillful state management with <b>Redux</b>.",
 			"logo": "reactLogo.png"
 		},
 		{
 			"technology": "Next.js",
-			"skills": "Server-side Rendering (SSR), Static Site Generation (SSG)",
+			"skills": "Unlocking peak performance through <b>Server-side Rendering (SSR)</b> and <b>Static Site Generation (SSG)</b> for web applications.",
 			"logo": "nextjsLogo.webp"
 		},
 		{
 			"technology": "TypeScript",
-			"skills": "Static Typing, Type Definitions",
+			"skills": "Creating <b>safer</b> and more maintainable code, harnessing the power of <b>type definitions</b> for an enhanced development experience.",
 			"logo": "typescriptLogo.png"
 		},
 		{
 			"technology": "TailwindCSS",
-			"skills": "Utility-first CSS Framework",
+			"skills": "Effortlessly streamlining styling for <b>consistent</b> and efficient designs.",
 			"logo": "tailwindcssLogo.png"
 		},
 		{
 			"technology": "Vercel",
-			"skills": "Website Online deployment",
+			"skills": "Expertly deploying websites online, ensuring <b>reliable</b> and high-performance hosting.",
 			"logo": "vercelLogo.png"
 		},
 		{
 			"technology": "Solidity",
-			"skills": "Ethereum Smart Contracts",
+			"skills": "Mastering <b>Ethereum smart contracts</b> using <b>Solidity</b> for blockchain-based applications.",
 			"logo": "solidityLogo.png"
 		},
 		{
 			"technology": "Laravel",
-			"skills": "PHP Framework for Web Development",
+			"skills": "In web development, I choose <b>Laravel</b>, a PHP framework known for its elegant syntax and powerful features.",
 			"logo": "laravelLogo.jpg"
 		},
 		{
 			"technology": "PHP",
-			"skills": "Server-side Scripting Language",
+			"skills": "Harnessing the versatility of <b>PHP</b> as a <b>server-side scripting language</b> for dynamic and efficient web applications.",
 			"logo": "phpLogo.png"
 		},
 		{
 			"technology": "GraphQL",
-			"skills": "API Query Language",
+			"skills": "Meticulously optimizing <b>data fetching</b> and crafting flexible APIs in my projects.",
 			"logo": "graphqlLogo.png"
 		},
 		{
 			"technology": "The Graph",
-			"skills": "GraphQL Service for Web3",
+			"skills": "Seamlessly integrating <b>The Graph</b>, a <b>GraphQL service for Web3</b>, into blockchain-related projects to retrieve and analyze data.",
 			"logo": "thegraphLogo.png"
 		},
 		{
 			"technology": "Google Analytics",
-			"skills": "Web Analytics Platform",
+			"skills": "Precisely tracking and <b>analyzing web traffic</b> and <b>user behavior</b>, thereby optimizing my websites.",
 			"logo": "googleanalyticsLogo.png"
 		},
 		{
 			"technology": "Google Tag Manager",
-			"skills": "Tag Management System",
+			"skills": "Effortlessly streamlining <b>tag implementation</b> and updates.",
 			"logo": "googletagmanagerLogo.png"
 		},
 		{
 			"technology": "Adobe Analytics",
-			"skills": "Digital Analytics Platform",
+			"skills": "Uncovering invaluable insights into <b>digital marketing</b> and <b>user engagement</b>.",
 			"logo": "adobeanalyticsLogo.webp"
 		},
 		{
 			"technology": "Jira",
-			"skills": "Project and Issue Tracking",
+			"skills": "Expertly managing <b>projects</b> and <b>tracking issues</b> with utmost efficiency.",
 			"logo": "jiraLogo.webp"
 		},
 		{
 			"technology": "Notion",
-			"skills": "Note-taking and Collaboration",
+			"skills": "Enhancing <b>productivity</b> and <b>organization</b> through seamless note-taking and collaboration in my projects.",
 			"logo": "notionLogo.avif"
 		},
 		{
 			"technology": "Figma",
-			"skills": "UI/UX Design and Prototyping",
+			"skills": "Crafting <b>visually appealing</b> and <b>user-friendly</b> interfaces with a focus on <b>UI/UX design</b> and <b>prototyping</b>.",
 			"logo": "figmaLogo.png"
 		}
 	]

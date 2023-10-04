@@ -1,7 +1,16 @@
-import React, { useState } from "react"
+import React from "react"
 import { EducationProps } from "@/types/IEducation"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import Modal from "./Modal"
+import {
+	AlertDialog,
+	AlertDialogCancel,
+	AlertDialogContent,
+	AlertDialogDescription,
+	AlertDialogFooter,
+	AlertDialogHeader,
+	AlertDialogTitle,
+	AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import { Button } from "./ui/button"
 
 const EducationComponent: React.FC<EducationProps> = ({
@@ -11,11 +20,7 @@ const EducationComponent: React.FC<EducationProps> = ({
 	date,
 	description,
 }) => {
-	const [isModalOpen, setIsModalOpen] = useState(false)
-
-	const toggleModal = () => {
-		setIsModalOpen(!isModalOpen)
-	}
+	const descriptionLines = description.split("\n")
 
 	return (
 		<Card className="bg-white dark:bg-[--bg-secondary] min-h-full flex flex-col justify-start">
@@ -39,21 +44,29 @@ const EducationComponent: React.FC<EducationProps> = ({
 						</div>
 					</div>
 					<div className="flex justify-center w-full">
-						<Button onClick={toggleModal}>See More</Button>
+						<AlertDialog>
+							<AlertDialogTrigger>
+								<Button>See more</Button>
+							</AlertDialogTrigger>
+							<AlertDialogContent className="h-[90%] overflow-auto">
+								<AlertDialogHeader>
+									<AlertDialogTitle>{title}</AlertDialogTitle>
+									<AlertDialogDescription>
+										{descriptionLines.map((line, index) => (
+											<p key={index} className="text-sm">
+												{line}
+											</p>
+										))}
+									</AlertDialogDescription>
+								</AlertDialogHeader>
+								<AlertDialogFooter>
+									<AlertDialogCancel>Close</AlertDialogCancel>
+								</AlertDialogFooter>
+							</AlertDialogContent>
+						</AlertDialog>
 					</div>
 				</div>
 			</CardFooter>
-			{isModalOpen && (
-				<Modal onClose={toggleModal}>
-					<div className="flex flex-col gap-2">
-						<div className="flex flex-col">
-							<h1 className="text-xl font-bold dark:text-black">{title}</h1>
-							<p className="text-slate-600">{institutionName}</p>
-						</div>
-						<p className="text-sm dark:text-black">{description}</p>
-					</div>
-				</Modal>
-			)}
 		</Card>
 	)
 }
