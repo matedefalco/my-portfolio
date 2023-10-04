@@ -1,44 +1,67 @@
 {
 	"projectsList": [
 		{
+			"name": "Token Allies",
+			"url": "https://tokenallies.com/",
+			"image": "tokenAllies.png",
+			"stack": ["React.js", "GraphQL", "Tailwind.css", "ChartJS"],
+			"description": "The first decentralized crowdfunding DeFi protocol on the Cardano Blockchain. I played a key role as one of the lead developers for this project."
+		},
+		{
 			"name": "Password Generator",
 			"url": "https://password-generator-matedefalco.vercel.app/",
-			"image": "passwordGenerator.png"
+			"image": "passwordGenerator.png",
+			"stack": ["React.js", "TypeScript", "Tailwind.css", "DaisyUI", "Clerk"],
+			"description": "Password generator that helps you create and store secure and random passwords."
 		},
 		{
 			"name": "Ranking Pinta Token",
 			"url": "https://ranking.pintatoken.com/",
-			"image": "rankingPNT.png"
+			"image": "rankingPNT.png",
+			"stack": ["React.js", "TypeScript", "Tailwind.css", "The Graph"],
+			"description": "Ranking Pinta Token is a user dashboard, allowing them to easily track their transactions gamified with interactive charts."
 		},
 		{
 			"name": "Dollar Calculator",
 			"url": "https://dollar-calculator-matedefalco.vercel.app/",
-			"image": "dollarCalculator.png"
+			"image": "dollarCalculator.png",
+			"stack": ["React.js", "TypeScript", "Tailwind.css", "Next.js"],
+			"description": "Currency conversion calculator that allows you to quickly convert between USD & ARS."
 		},
 		{
 			"name": "Blockchain Balance Tool",
 			"url": "https://blockchain-wallet-balance-tool.vercel.app/",
-			"image": "blockchainBalanceTool.png"
+			"image": "blockchainBalanceTool.png",
+			"stack": ["React.js", "Web3.js", "ChakraUI"],
+			"description": "Tool to check the balances of your cryptocurrency wallet on blockchain."
 		},
 		{
 			"name": "Memotest",
 			"url": "https://memotest-matedefalco.vercel.app/",
-			"image": "memotest.png"
+			"image": "memotest.png",
+			"stack": ["React.js", "Vite", "ChakraUI"],
+			"description": "Online memory game to test your memory and concentration skills."
 		},
 		{
 			"name": "Words per Minute",
 			"url": "https://words-per-minute-matedefalco.vercel.app/",
-			"image": "wordsPerMinute.png"
+			"image": "wordsPerMinute.png",
+			"stack": ["React.js", "Tailwind.css", "ChakraUI"],
+			"description": "Typing speed test tool that allows you to measure your typing speed in words per minute (WPM)."
 		},
 		{
 			"name": "Color Game",
 			"url": "https://color-game-matedefalco.vercel.app/",
-			"image": "colorGame.png"
+			"image": "colorGame.png",
+			"stack": ["React.js", "Tailwind.css", "TypeScript"],
+			"description": "Online color game that challenges your color perception and memory."
 		},
 		{
 			"name": "Tik Tak Toe",
 			"url": "https://tik-tak-toe-matedefalco.vercel.app/",
-			"image": "tikTakToe.png"
+			"image": "tikTakToe.png",
+			"stack": ["React.js", "Tailwind.css", "TypeScript", "Vite"],
+			"description": "An online version of the classic tic-tac-toe game."
 		}
 	]
 }
