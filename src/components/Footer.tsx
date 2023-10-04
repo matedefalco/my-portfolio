@@ -25,7 +25,6 @@ const Footer = () => {
 					<ul className="flex flex-col items-center lg:items-start gap-2">
 						{contactDB.contact.map((contact) => (
 							<li key={contact.name} className="flex gap-2">
-								{contact.name === "Phone" && <AiFillPhone size={24} />}
 								{contact.name === "LinkedIn" && <AiFillLinkedin size={24} />}
 								{contact.name === "GitHub" && <AiFillGithub size={24} />}
 								{contact.name === "Mail" && <AiFillMail size={24} />}
@@ -37,7 +36,7 @@ const Footer = () => {
 										rel="noopener noreferrer"
 										className="hover:text-gray-700 hover:underline"
 									>
-										<p>{contact.value}</p>
+										<p>{contact.name}</p>
 									</a>
 								) : contact.name === "Mail" ? (
 									<a
