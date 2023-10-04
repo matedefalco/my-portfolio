@@ -26,7 +26,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 					className={
 						activeTab === "skills"
 							? "text-lg text-gray-800 dark:text-white font-bold"
-							: "text-lg text-gray-500 dark:text-gray-500"
+							: "text-md text-gray-500 dark:text-gray-500"
 					}
 				>
 					Skills
@@ -37,7 +37,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 					className={
 						activeTab === "projects"
 							? "text-lg text-gray-800 dark:text-white font-bold"
-							: "text-lg text-gray-500 dark:text-gray-500"
+							: "text-md text-gray-500 dark:text-gray-500"
 					}
 				>
 					Projects
@@ -48,7 +48,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 					className={
 						activeTab === "education"
 							? "text-lg text-gray-800 dark:text-white font-bold"
-							: "text-lg text-gray-500 dark:text-gray-500"
+							: "text-md text-gray-500 dark:text-gray-500"
 					}
 				>
 					Education
