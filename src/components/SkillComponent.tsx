@@ -22,9 +22,11 @@ const SkillComponent: React.FC<SkillProps> = ({ technology, skills, logo }) => {
 					alt={technology}
 					className="object-cover w-20 h-20 rounded-full border-2  border-sky-800 "
 				/>
-				<div className="flex flex-col items-center lg:items-start">
+				<div className="flex flex-col items-center lg:items-start ">
 					<h1 className="text-sm font-bold">{technology}</h1>
-					<p className="text-xs text-gray-400">{splitAndWrapSkills(skills)}</p>
+					<p className="text-xs text-gray-400 m-auto text-center lg:text-start">
+						{splitAndWrapSkills(skills)}
+					</p>
 				</div>
 			</CardContent>
 		</Card>

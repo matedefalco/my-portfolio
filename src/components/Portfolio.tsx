@@ -29,7 +29,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ activePage }) => {
 							: "text-md text-gray-500 dark:text-gray-500"
 					}
 				>
-					Skills
+					Stack
 				</Button>
 				<Button
 					variant="link"
