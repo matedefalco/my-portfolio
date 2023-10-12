@@ -1,32 +1,34 @@
 import { createChart, ColorType, ISeriesApi } from "lightweight-charts"
 import { useEffect, useRef } from "react"
+import { useTheme } from "@/context/ThemeProvider"
 
 interface ChartComponentProps {
 	data: { time: string; value: number }[]
 	colors?: {
-		backgroundColor?: string
 		lineColor?: string
-		textColor?: string
 		areaTopColor?: string
 		areaBottomColor?: string
 	}
 }
 
 export const ChartComponent: React.FC<ChartComponentProps> = (props) => {
+	const { theme } = useTheme()
 	const {
 		data,
 		colors: {
-			backgroundColor = "white",
 			lineColor = "#2962FF",
-			textColor = "black",
 			areaTopColor = "#2962FF",
 			areaBottomColor = "rgba(41, 98, 255, 0.28)",
 		} = {},
 	} = props
 
+	const textColor = theme === "light" ? "black" : "white"
+
 	const chartContainerRef = useRef<HTMLDivElement | null>(null)
 
 	useEffect(() => {
+		let chart: ReturnType<typeof createChart> | null = null
+
 		if (chartContainerRef.current) {
 			const handleResize = () => {
 				if (chart && chartContainerRef.current) {
@@ -34,9 +36,12 @@ export const ChartComponent: React.FC<ChartComponentProps> = (props) => {
 				}
 			}
 
-			const chart = createChart(chartContainerRef.current, {
+			chart = createChart(chartContainerRef.current, {
 				layout: {
-					background: { type: ColorType.Solid, color: backgroundColor },
+					background: {
+						type: ColorType.Solid,
+						color: theme === "light" ? "white" : "black",
+					},
 					textColor,
 				},
 				width: chartContainerRef.current.clientWidth,
@@ -45,14 +50,19 @@ export const ChartComponent: React.FC<ChartComponentProps> = (props) => {
 
 			chart.timeScale().fitContent()
 
-			// Cambia el tipo de serie de "Candlestick" a "Area" aquí
-			const newSeries: ISeriesApi<"Area"> = chart.addAreaSeries({
+			const series: ISeriesApi<"Area"> = chart.addAreaSeries({
 				lineColor,
 				topColor: areaTopColor,
 				bottomColor: areaBottomColor,
 			})
 
-			newSeries.setData(data)
+			series.applyOptions({
+				priceFormat: {
+					type: "volume",
+				},
+			})
+
+			series.setData(data)
 
 			window.addEventListener("resize", handleResize)
 
@@ -64,14 +74,7 @@ export const ChartComponent: React.FC<ChartComponentProps> = (props) => {
 				}
 			}
 		}
-	}, [
-		data,
-		backgroundColor,
-		lineColor,
-		textColor,
-		areaTopColor,
-		areaBottomColor,
-	])
+	}, [data, theme, lineColor, textColor, areaTopColor, areaBottomColor])
 
 	return <div ref={chartContainerRef} />
 }

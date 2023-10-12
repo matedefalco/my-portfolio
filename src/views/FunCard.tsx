@@ -1,5 +1,11 @@
 import { ChartComponent } from "@/components/Chart"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	CardTitle,
+	CardDescription,
+} from "@/components/ui/card"
 import { motion } from "framer-motion"
 
 const getCurrentDateInFormat = () => {
@@ -23,19 +29,20 @@ const FunCard = () => {
 			<Card>
 				<CardHeader>
 					<CardTitle>👉 How people's life improves when they hire me</CardTitle>
+					<CardDescription>You can´t fake data</CardDescription>
 				</CardHeader>
 				<CardContent>
 					<ChartComponent
 						data={[
 							{
 								time: `${currentDate.year}-${currentDate.month}-${currentDate.day}`,
-								value: 22.67,
+								value: 33,
 							},
 							{
 								time: `${currentDate.year + 30}-${currentDate.month}-${
 									currentDate.day
 								}`,
-								value: 32.51,
+								value: 100,
 							},
 						]}
 					/>
