@@ -26,10 +26,12 @@ const FunCard = () => {
 			whileInView={{ opacity: 1, x: 0 }}
 			transition={{ duration: 1.5 }}
 		>
-			<Card>
+			<Card className="bg-white dark:bg-slate-900">
 				<CardHeader>
 					<CardTitle>👉 How people's life improves when they hire me</CardTitle>
-					<CardDescription>You can´t fake data</CardDescription>
+					<CardDescription>
+						<p>You can´t fake data</p>
+					</CardDescription>
 				</CardHeader>
 				<CardContent>
 					<ChartComponent

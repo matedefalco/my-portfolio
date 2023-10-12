@@ -40,7 +40,7 @@ export const ChartComponent: React.FC<ChartComponentProps> = (props) => {
 				layout: {
 					background: {
 						type: ColorType.Solid,
-						color: theme === "light" ? "white" : "black",
+						color: theme === "light" ? "white" : "#0f172b",
 					},
 					textColor,
 				},
