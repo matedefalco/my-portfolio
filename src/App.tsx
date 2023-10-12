@@ -48,7 +48,7 @@ const App = () => {
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					transition={{ duration: 1.8 }}
-					className="flex flex-col"
+					className="flex flex-col w-[80%]"
 				>
 					{isCardActive ? (
 						<FunCard />

@@ -1,11 +1,19 @@
+import { ChartComponent } from "@/components/Chart"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { createChart } from "lightweight-charts"
+
+const getCurrentDateInFormat = () => {
+	const today = new Date()
+	const year = today.getFullYear()
+	const month = (today.getMonth() + 1).toString().padStart(2, "0")
+	const day = today.getDate().toString().padStart(2, "0")
+
+	return { year: year, month: month, day: day }
+}
 
 const FunCard = () => {
-	const chart = createChart(document.body, { width: 400, height: 300 })
-	const lineSeries = chart.addLineSeries()
-	lineSeries.setData([{ time: "2019-04-11", value: 80.01 }])
+	const currentDate = getCurrentDateInFormat()
+
 	return (
 		<motion.div
 			initial={{ opacity: 0, x: -200 }}
@@ -14,12 +22,23 @@ const FunCard = () => {
 		>
 			<Card>
 				<CardHeader>
-					<CardTitle>
-						👉 How people´s life improve´s when they hire me
-					</CardTitle>
+					<CardTitle>👉 How people's life improves when they hire me</CardTitle>
 				</CardHeader>
 				<CardContent>
-					<p>Card Content</p>
+					<ChartComponent
+						data={[
+							{
+								time: `${currentDate.year}-${currentDate.month}-${currentDate.day}`,
+								value: 22.67,
+							},
+							{
+								time: `${currentDate.year + 30}-${currentDate.month}-${
+									currentDate.day
+								}`,
+								value: 32.51,
+							},
+						]}
+					/>
 				</CardContent>
 			</Card>
 		</motion.div>
