@@ -9,7 +9,7 @@ const Footer = () => {
 			id="footer"
 			className="flex flex-col gap-8 items-center bg-slate-200 dark:bg-slate-900 p-8"
 		>
-			<h1 className="font-extrabold text-2xl font-serif">CONTACT</h1>
+			<h1 className="font-extrabold text-3xl font-serif">CONTACT</h1>
 			<div className="flex flex-col lg:flex-row px-16 items-start justify-between gap-8 lg:gap-0">
 				<div className="flex flex-col w-full lg:w-[45%] gap-4 items-center lg:items-start text-center lg:text-start mx-auto lg:mx-0">
 					<h2 className="text-xl font-bold ">Drop a message</h2>
