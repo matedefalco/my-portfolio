@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio"
 import Presentation from "./components/Presentation"
 import Footer from "./components/Footer"
 import { motion } from "framer-motion"
+import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 
 const App = () => {
 	const pages = ["projects", "skills", "education"]
@@ -12,47 +13,74 @@ const App = () => {
 
 	const handlePageChange = (pageIndex: number) => {
 		setActivePageIndex(pageIndex)
-		const element = document.getElementById("portfolio")
-		if (element) {
-			element.scrollIntoView({ behavior: "smooth" })
-		}
 	}
 
 	return (
 		<main className="flex flex-col min-h-screen items-center">
 			<NavBar />
-			<div className="pt-16 flex flex-col items-center w-full gap-8 bg-[--background-color]">
-				<motion.div
-					className="flex flex-col w-[80%]"
-					initial={{ opacity: 0, x: -200 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					transition={{ duration: 1.5 }}
+			<Parallax pages={4} className="pt-16 w-full flex flex-col items-center">
+				{/* Page 1 */}
+				<ParallaxLayer
+					offset={0}
+					speed={1}
+					className="flex flex-col items-center"
 				>
-					<Presentation
-						onClick={(pageIndex) => handlePageChange(pageIndex)}
-						activePageIndex={activePageIndex}
-					/>
-				</motion.div>
-				<motion.div
-					className="flex flex-col w-[80%]"
-					initial={{ opacity: 0, x: 200 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					transition={{ duration: 1.5 }}
+					<motion.div
+						className="flex flex-col h-full items-center justify-center w-[80%]"
+						initial={{ opacity: 0, x: -200 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1.5 }}
+					>
+						<Presentation
+							onClick={(pageIndex) => handlePageChange(pageIndex)}
+							activePageIndex={activePageIndex}
+						/>
+					</motion.div>
+				</ParallaxLayer>
+
+				{/* Page 2 */}
+				<ParallaxLayer
+					offset={1}
+					speed={0.5}
+					className="w-full flex flex-col items-center"
 				>
-					<AboutMe />
-				</motion.div>
-				<motion.div
-					className="flex flex-col w-[80%]"
-					initial={{ opacity: 0, x: -200 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					transition={{ duration: 1.5 }}
+					<motion.div
+						className="flex flex-col h-full items-center justify-center w-[80%]"
+						initial={{ opacity: 0, x: 200 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1.5 }}
+					>
+						<AboutMe />
+					</motion.div>
+				</ParallaxLayer>
+
+				{/* Page 3 */}
+				<ParallaxLayer
+					offset={2}
+					speed={0.5}
+					className="w-full flex flex-col items-center justify-center"
 				>
-					<Portfolio activePage={pages[activePageIndex]} />
-				</motion.div>
-				<div className="flex flex-col w-full">
-					<Footer />
-				</div>
-			</div>
+					<motion.div
+						className="flex flex-col h-full items-center justify-center w-[80%]"
+						initial={{ opacity: 0, x: -200 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1.5 }}
+					>
+						<Portfolio activePage={pages[activePageIndex]} />
+					</motion.div>
+				</ParallaxLayer>
+
+				{/* Page 4 (Footer) */}
+				<ParallaxLayer
+					offset={0}
+					speed={0.5}
+					className="w-full flex flex-col items-end"
+				>
+					<div className="flex flex-col min-w-full justify-end">
+						<Footer />
+					</div>
+				</ParallaxLayer>
+			</Parallax>
 		</main>
 	)
 }
