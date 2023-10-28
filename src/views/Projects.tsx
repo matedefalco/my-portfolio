@@ -10,7 +10,7 @@ const Projects = () => {
 						<ProjectComponent
 							name={project.name}
 							url={project.url}
-							image={project.image}
+							image={`./files/projects/${project.image}`}
 							description={project.description}
 							stack={project.stack}
 						/>

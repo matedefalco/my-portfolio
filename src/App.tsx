@@ -16,9 +16,10 @@ const App = () => {
 	}
 
 	return (
-		<main className="flex flex-col min-h-screen items-center">
+		<main className="flex flex-col w-full min-h-screen items-center">
 			<NavBar />
-			<Parallax pages={4} className="pt-16 w-full flex flex-col items-center">
+			<Parallax pages={4} className="w-full flex flex-col items-center">
+				<ParallaxLayer sticky={{ start: 0.9, end: 3.5 }}></ParallaxLayer>
 				{/* Page 1 */}
 				<ParallaxLayer
 					offset={0}
@@ -37,7 +38,6 @@ const App = () => {
 						/>
 					</motion.div>
 				</ParallaxLayer>
-
 				{/* Page 2 */}
 				<ParallaxLayer
 					offset={1}
@@ -58,7 +58,7 @@ const App = () => {
 				<ParallaxLayer
 					offset={2}
 					speed={0.5}
-					className="w-full flex flex-col items-center justify-center"
+					className="w-full flex flex-col items-center"
 				>
 					<motion.div
 						className="flex flex-col h-full items-center justify-center w-[80%]"
@@ -72,11 +72,11 @@ const App = () => {
 
 				{/* Page 4 (Footer) */}
 				<ParallaxLayer
-					offset={0}
+					offset={3}
 					speed={0.5}
-					className="w-full flex flex-col items-end"
+					className="flex flex-col items-center"
 				>
-					<div className="flex flex-col min-w-full justify-end">
+					<div className="flex flex-col min-w-full">
 						<Footer />
 					</div>
 				</ParallaxLayer>

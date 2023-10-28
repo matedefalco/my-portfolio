@@ -2,14 +2,14 @@ import { Button } from "./ui/button"
 
 const AboutMe = () => {
 	const handleResumeClick = () => {
-		const resumeUrl = "CurriculumMateo-English.pdf"
+		const resumeUrl = "./filesdocs/CurriculumMateo-English.pdf"
 		window.open(resumeUrl, "_blank")
 	}
 
 	return (
 		<div className="flex flex-col items-center lg:items-center lg:flex-row gap-8">
 			<img
-				src="mateoDeFalco.png"
+				src="./files/docs/mateoDeFalco.png"
 				alt="Profile Image"
 				className="h-80 w-80 border-4 rounded-full object-cover"
 			/>
