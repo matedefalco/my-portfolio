@@ -13,6 +13,10 @@ const App = () => {
 
 	const handlePageChange = (pageIndex: number) => {
 		setActivePageIndex(pageIndex)
+		const element = document.getElementById("portfolio")
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" })
+		}
 	}
 
 	return (
