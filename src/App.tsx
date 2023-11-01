@@ -7,11 +7,9 @@ import Footer from "./components/Footer"
 import { motion } from "framer-motion"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 
-
 const App = () => {
 	const pages = ["projects", "skills", "education"]
 	const [activePageIndex, setActivePageIndex] = useState<number>(0)
-	const [isCardActive, setIsCardActive] = useState<boolean>(false)
 
 	const handlePageChange = (pageIndex: number) => {
 		setActivePageIndex(pageIndex)

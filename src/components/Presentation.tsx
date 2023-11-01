@@ -24,7 +24,7 @@ const Presentation: React.FC<PresentationProps> = ({ onClick }) => {
 			<div className="flex gap-2">
 				<Button onClick={() => onClick(0)}>Previous Projects</Button>
 				<Button onClick={() => onClick(1)} variant="outline">
-					Skills
+					Stack
 				</Button>
 			</div>
 		</div>
