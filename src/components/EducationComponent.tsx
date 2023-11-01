@@ -39,7 +39,11 @@ const EducationComponent: React.FC<EducationProps> = ({
 						<h1 className="text-sm font-bold">{title}</h1>
 						<p className="text-xs text-slate-400">{date}</p>
 						<div className="flex items-center gap-1">
-							<img src="location.png" alt="Location" className="w-3 h-3" />
+							<img
+								src="./files/icons/location.png"
+								alt="Location"
+								className="w-3 h-3"
+							/>
 							<p className="text-xs">{institutionName}</p>
 						</div>
 					</div>
