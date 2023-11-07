@@ -2,7 +2,7 @@ import { Button } from "./ui/button"
 
 const AboutMe = () => {
 	const handleResumeClick = () => {
-		const resumeUrl = "./filesdocs/CurriculumMateo-English.pdf"
+		const resumeUrl = "./files/docs/CurriculumMateo-English.pdf"
 		window.open(resumeUrl, "_blank")
 	}
 
