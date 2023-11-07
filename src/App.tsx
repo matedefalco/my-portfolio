@@ -1,15 +1,16 @@
-import { useState, useRef } from "react"
+import { useState } from "react"
 import AboutMe from "./components/AboutMe"
 import NavBar from "./components/NavBar"
 import Portfolio from "./components/Portfolio"
 import Presentation from "./components/Presentation"
 import Footer from "./components/Footer"
-import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax"
+import { motion } from "framer-motion"
+// import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax"
 
 const App = () => {
 	const pages = ["projects", "skills", "education"]
 	const [activePageIndex, setActivePageIndex] = useState<number>(0)
-	const parallax = useRef<IParallax>(null!)
+	// const parallax = useRef<IParallax>(null!)
 
 	const handlePageChange = (pageIndex: number) => {
 		setActivePageIndex(pageIndex)
@@ -20,87 +21,46 @@ const App = () => {
 	}
 
 	return (
-		<main className="flex flex-col w-full min-h-screen items-center">
+		<main className="flex flex-col w-full min-h-screen items-center gap-16">
 			<NavBar />
-			<Parallax
-				pages={4}
-				ref={parallax}
-				style={{
-					bottom: "0",
-					left: "0",
-					height: "100%",
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-				}}
+
+			{/* Page 1 */}
+			<motion.div
+				className="flex flex-col w-[80%] items-center h-full gap-8 "
+				initial={{ opacity: 0, x: -200 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{ duration: 1.5 }}
 			>
-				{/* Page 1 */}
-				<ParallaxLayer
-					offset={0}
-					speed={1}
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						height: "100%",
-						justifyItems: "center",
-						justifyContent: "center",
-						width: "80%",
-					}}
-				>
-					<Presentation
-						onClick={(pageIndex) => handlePageChange(pageIndex)}
-						activePageIndex={activePageIndex}
-					/>
-				</ParallaxLayer>
-				{/* Page 2 */}
-				<ParallaxLayer
-					offset={1}
-					speed={0.5}
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						height: "100%",
-						justifyItems: "center",
-						justifyContent: "center",
-						width: "80%",
-					}}
-				>
-					<AboutMe />
-				</ParallaxLayer>
+				<Presentation
+					onClick={(pageIndex) => handlePageChange(pageIndex)}
+					activePageIndex={activePageIndex}
+				/>
+			</motion.div>
 
-				{/* Page 3 */}
-				<ParallaxLayer
-					offset={2}
-					speed={0.2}
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						height: "100%",
-						justifyItems: "center",
-						justifyContent: "center",
-						width: "80%",
-					}}
-				>
-					<Portfolio activePage={pages[activePageIndex]} />
-				</ParallaxLayer>
+			{/* Page 2 */}
+			<motion.div
+				className="flex flex-col h-full items-center justify-center w-[80%]"
+				initial={{ opacity: 0, x: 200 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{ duration: 1.5 }}
+			>
+				<AboutMe />
+			</motion.div>
 
-				{/* Page 4 (Footer) */}
-				<ParallaxLayer
-					offset={4}
-					factor={0.2}
-					speed={0.4}
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						height: "100%",
-						justifyItems: "center",
-						justifyContent: "center",
-						width: "80%",
-					}}
-				>
-					<Footer />
-				</ParallaxLayer>
-			</Parallax>
+			{/* Page 3 */}
+			<motion.div
+				className="flex flex-col h-full items-center justify-center w-[80%]"
+				initial={{ opacity: 0, x: -200 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{ duration: 1.5 }}
+			>
+				<Portfolio activePage={pages[activePageIndex]} />
+			</motion.div>
+
+			{/* Page 4 (Footer) */}
+			<div className="flex flex-col min-w-full justify-end">
+				<Footer />
+			</div>
 		</main>
 	)
 }

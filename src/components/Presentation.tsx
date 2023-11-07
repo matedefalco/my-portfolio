@@ -9,14 +9,14 @@ const Presentation: React.FC<PresentationProps> = ({ onClick }) => {
 		>
 			<div className="flex flex-col">
 				<p className="text-4xl lg:text-8xl text-slate-400">I'm a</p>
-				<h1 className="text-6xl lg:text-8xl font-serif font-black text-[--primary-color]">
+				<h1 className="text-5xl lg:text-8xl font-serif font-black text-[--primary-color]">
 					FULL-STACK
 				</h1>
 				<div className="flex">
-					<h1 className="text-6xl lg:text-8xl font-serif font-black">
+					<h1 className="text-5xl lg:text-8xl font-serif font-black">
 						DEVELOPER
 					</h1>
-					<h1 className="text-6xl lg:text-8xl font-serif font-black text-[--primary-color]">
+					<h1 className="text-5xl lg:text-8xl font-serif font-black text-[--primary-color]">
 						.
 					</h1>
 				</div>

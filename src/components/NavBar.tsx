@@ -21,7 +21,11 @@ const NavBar = () => {
 			</div>
 			<div className="flex gap-2 items-center">
 				<ModeToggle />
-				<Button variant="outline" onClick={handleScroll}>
+				<Button
+					variant="outline"
+					className="bg-[--primary-color]"
+					onClick={handleScroll}
+				>
 					CONTACT
 				</Button>
 			</div>
