@@ -9,7 +9,7 @@ const Skills = () => {
 						<SkillComponent
 							technology={skill.technology}
 							skills={skill.skills}
-							logo={skill.logo}
+							logo={`./files/stack/${skill.logo}`}
 						/>
 					</li>
 				))}

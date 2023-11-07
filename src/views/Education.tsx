@@ -9,7 +9,7 @@ const Education = () => {
 					<li key={index} className="">
 						<EducationComponent
 							institutionName={education.institutionName}
-							imageSrc={education.image}
+							imageSrc={`./files/education/${education.image}`}
 							title={education.title}
 							date={education.date}
 							description={education.description}

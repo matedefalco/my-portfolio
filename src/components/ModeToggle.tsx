@@ -7,7 +7,11 @@ export function ModeToggle() {
 	return (
 		<Button variant="outline" size="icon">
 			<img
-				src={theme === "dark" ? "sun.png" : "moonIconLight.png"}
+				src={
+					theme === "dark"
+						? "./files/icons/sun.png"
+						: "./files/icons/moonIconLight.png"
+				}
 				alt="Theme"
 				className="w-5 h-5"
 				onClick={() => setTheme(theme === "light" ? "dark" : "light")}

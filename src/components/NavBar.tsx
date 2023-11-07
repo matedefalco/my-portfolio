@@ -12,12 +12,20 @@ const NavBar = () => {
 	return (
 		<div className="flex justify-between items-center w-full p-6 lg:p-4 border-b-2 sticky top-0 bg-white dark:bg-slate-900 z-50">
 			<div className="flex gap-2 items-center">
-				<img src="sukaDfCrypto.png" alt="Suka" className="w-12 h-12" />
+				<img
+					src="./files/icons/sukaDfCrypto.png"
+					alt="Suka"
+					className="w-12 h-12"
+				/>
 				<p className="text-xl lg:text-2xl">Mateo De Falco</p>
 			</div>
 			<div className="flex gap-2 items-center">
 				<ModeToggle />
-				<Button variant="outline" onClick={handleScroll}>
+				<Button
+					variant="outline"
+					className="bg-[--primary-color]"
+					onClick={handleScroll}
+				>
 					CONTACT
 				</Button>
 			</div>
